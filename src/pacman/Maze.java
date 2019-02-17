@@ -173,7 +173,7 @@ public class Maze extends Parent {
             @Override
             protected String computeValue() {
                 if (gamePaused.get()) {
-                    return " PRESS 'P' BUTTON TO RESUME";
+                    return " PRESS 'ESCAPE' TO RESUME";
                 } else {
                     return "   PRESS ANY KEY TO START!";
                 }
@@ -458,7 +458,7 @@ public class Maze extends Parent {
             return;
         }
 
-        if (e.getCode() == KeyCode.P) {
+        if (e.getCode() == KeyCode.ESCAPE) {
             if (gamePaused.get()) {
                 resumeGame();
             } else {
