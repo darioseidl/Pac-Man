@@ -13,12 +13,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Pac-Man by Henry Zhang www.javafxgame.com and Patrick Webster");
+
+        primaryStage.setTitle("Pac-Man by Bright Minds team");
         primaryStage.setWidth(MazeData.calcGridX(MazeData.GRID_SIZE_X + 2));
         primaryStage.setHeight(MazeData.calcGridY(MazeData.GRID_SIZE_Y + 4));
 
         final Group root = new Group();
         final Scene scene = new Scene(root);
+
         root.getChildren().add(new Maze());
         primaryStage.setScene(scene);
         primaryStage.show();
