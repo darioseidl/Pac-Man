@@ -11,6 +11,8 @@ public class DyingPacMan extends Arc {
 
     private final Timeline timeline;
 
+    private final SoundEffect dieEffect = new SoundEffect("sound/pac_die.wav");
+
     public DyingPacMan(final Maze maze) {
 
         timeline = new Timeline();
@@ -63,6 +65,8 @@ public class DyingPacMan extends Arc {
     }
 
     public void startAnimation(int x, int y) {
+
+        dieEffect.playClip();
 
         setStartAngle(90);
         setCenterX(x);
